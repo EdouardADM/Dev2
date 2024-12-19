@@ -14,16 +14,20 @@ print(f"Fraction3 : {fraction3}")
 print(fraction1.__add__(fraction2))
 print(fraction1+fraction2)
 
+print("--------sub-----------")
 #__sub__
 print(fraction1-fraction2)
 print(fraction1.__sub__(fraction2))
 
+print("--------mul------------")
 #__mul__
 print(fraction1*fraction2)
 
+print("--------truediv------------")
 #__trueDiv__
 print(fraction1/fraction2)
 
+print("--------pow-----------")
 #__pow__
 print(fraction1**2)
 
@@ -49,3 +53,6 @@ print(fraction2.is_proper())
 # is_unit
 print(fraction3.is_unit())
 print(fraction1.is_unit())
+
+
+print(fraction3*fraction4)
