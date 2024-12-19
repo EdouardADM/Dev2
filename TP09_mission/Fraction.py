@@ -1,4 +1,5 @@
 from math import gcd
+import pydoc
 
 class Fraction:
     """Class representing a fraction and operations on it
@@ -202,3 +203,5 @@ class Fraction:
         diff = abs(self.__num * other.__den - other.__num * self.__den)
         return diff == 1
 
+if __name__ == "__main__":
+    pydoc.writedoc(Fraction)
