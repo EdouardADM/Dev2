@@ -1,8 +1,9 @@
 from Fraction import Fraction
 import unittest
+import coverage
 
 
-class onVaLaTesterCteFraction(unittest.TestCase):
+class testsFractions(unittest.TestCase):
 
     def testCreationFraction(self):
         fraction = Fraction(3, 4)
@@ -30,6 +31,7 @@ class onVaLaTesterCteFraction(unittest.TestCase):
         fraction2 = Fraction(3, 4)
         fraction3 = Fraction(4, 2)
         fraction4 = Fraction(1, -2)
+        fraction5 = Fraction(10,1)
         # __str__
         self.assertEqual(str(fraction1), '5/2')
         self.assertEqual(str(fraction2), '3/4')
@@ -38,8 +40,10 @@ class onVaLaTesterCteFraction(unittest.TestCase):
         # as_mixed_number
         self.assertEqual(fraction1.as_mixed_number(), '2 + 1/2')
         self.assertEqual(fraction2.as_mixed_number(), '3/4')
+        self.assertEqual(fraction5.as_mixed_number(), '10')
         self.assertEqual(str(fraction3), '2')
         self.assertEqual(str(fraction4), '-1/2')
+
 
     def testOperationsMathematiques(self):
         fraction1 = Fraction(3, 4)
@@ -178,4 +182,8 @@ class onVaLaTesterCteFraction(unittest.TestCase):
 
 
 if __name__ == '__main__':
+    cov = coverage.Coverage()
+    cov.start()
     unittest.main(argv=['first-arg-is-ignored'], exit=False)
+    cov.stop()
+    cov.report()
